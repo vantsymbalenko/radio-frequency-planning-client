@@ -18,11 +18,10 @@ export const MapWithAKmlLayer = compose(
   withScriptjs,
   withGoogleMap
 )(props => (
-  <GoogleMap defaultZoom={9} defaultCenter={{ lat: 41.9, lng: -87.624 }} >
+  <GoogleMap defaultZoom={9} defaultCenter={{ lat: 41.9, lng: -87.624 }}>
     <KmlLayer
-      url="https://sites.google.com/site/radioplaning001/test1.kml"
-      options={{ preserveViewport: true, suppressInfoWindows: true, }}
-
+      url={props.url}
+      options={{ preserveViewport: true, suppressInfoWindows: true }}
     />
   </GoogleMap>
 ));
