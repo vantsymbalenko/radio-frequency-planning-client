@@ -12,15 +12,15 @@ export const MapWithAKmlLayer = compose(
   withProps({
     googleMapURL: `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&v=3.exp&libraries=geometry,drawing,places`,
     loadingElement: <div style={{ height: `100%` }} />,
-    containerElement: <div style={{ height: `400px` }} />,
+    containerElement: <div style={{ height: `100%` }} />,
     mapElement: <div style={{ height: `100%` }} />
   }),
   withScriptjs,
   withGoogleMap
 )(props => (
-  <GoogleMap defaultZoom={9} defaultCenter={{ lat: 41.9, lng: -87.624 }} defaultOptions={{mapTypeId: "satellite"}}>
+  <GoogleMap defaultZoom={9} defaultCenter={{ lat: 41.9, lng: -87.624 }} >
     <KmlLayer
-      url="https://sites.google.com/site/radioplaning001/test.kml"
+      url="https://sites.google.com/site/radioplaning001/test1.kml"
       options={{ preserveViewport: true, suppressInfoWindows: true, }}
 
     />
